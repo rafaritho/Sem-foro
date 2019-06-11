@@ -21,4 +21,4 @@ Como provar que ele funciona:
 
 O programa usa um semáforo para controlar o acesso à variável count, que é uma variável estática dentro da classe Shared. Shared.count é incrementado cinco vezes pelo thread "A" e diminuído cinco vezes pelo thread "B".
 Para evitar que esses dois threads acessem o Shared.count ao mesmo tempo, o acesso é permitido somente depois que uma permissão é adquirida do semáforo controlador. Após o acesso estar completo, a permissão é liberada. Dessa forma, apenas um thread por vez acessará o Shared.count, como mostra a saída.
-Sem o uso do semáforo, os acessos ao Shared.count pelos dois threads teriam ocorrido simultaneamente, e os incrementos e decrementos seriam misturados. 
+Sem o uso do semáforo, os acessos ao Shared.count pelos dois threads teriam ocorrido simultaneamente, e os incrementos e decrementos seriam misturados. Exemplo: https://i.imgur.com/ohzvCpD.png
