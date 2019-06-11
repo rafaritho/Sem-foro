@@ -40,11 +40,7 @@ class MyThread extends Thread
                 for(int i=0; i < 5; i++) 
                 { 
                     Shared.count++; 
-                    System.out.println(threadName + ": " + Shared.count); 
-          
-                    //Agora se mantem em espera para que 
-                    // a thread B execute 
-                    Thread.sleep(10); 
+                    System.out.println(threadName + ": " + Shared.count);           
                 } 
             } catch (InterruptedException exc) { 
                     System.out.println(exc); 
@@ -75,11 +71,8 @@ class MyThread extends Thread
                 for(int i=0; i < 5; i++) 
                 { 
                     Shared.count--; 
-                    System.out.println(threadName + ": " + Shared.count); 
-          
-                    // Now, allowing a context switch -- if possible. 
-                    // for thread A to execute 
-                    Thread.sleep(10); 
+                    System.out.println(threadName + ": " + Shared.count);           
+                    
                 } 
             } catch (InterruptedException exc) { 
                     System.out.println(exc); 
@@ -98,21 +91,21 @@ public class Main
         // with number of permits 1 
         Semaphore sem = new Semaphore(1); 
           
-        // creating two threads with name A and B 
+        // criando duas threads com nome A e B 
         // Note that thread A will increment the count 
         // and thread B will decrement the count 
         MyThread mt1 = new MyThread(sem, "A"); 
         MyThread mt2 = new MyThread(sem, "B"); 
           
-        // stating threads A and B 
+        // iniciando threads A e B 
         mt1.start(); 
         mt2.start(); 
           
-        // waiting for threads A and B  
+        // esperando pelas threads A e B  
         mt1.join(); 
         mt2.join(); 
           
-        // count will always remain 0 after 
+       
         // both threads will complete their execution 
         System.out.println("count: " + Shared.count); 
     } 
