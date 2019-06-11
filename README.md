@@ -1,7 +1,7 @@
 # Sem-foro
 Projeto de SO 
 
-Como compilar o programa no Linux:
+Como compilar o programa:
 
 Com o JDK (Java SE Development Kit) instalado, pode ser usado o javac, que é um compilador para a linguagem Java.
 
