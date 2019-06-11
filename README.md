@@ -7,13 +7,15 @@ Com o JDK (Java SE Development Kit) instalado, pode ser usado o javac, que é um
 
 Para compilar o código java, o comando é o seguinte:
 
-$ javac SeuCodigo.java 
+$ javac Main.java 
 Após executado o comando acima, se não for informado NADA no seu terminal é porque a compilação foi executada com sucesso. Posteriormente, pode-se notar que foi gerado um arquivo no diretório em que seu código foi compilado.
 
 Para executá-lo, execute o comando abaixo:
 
-$ java SeuCodigo
+$ java Main
 Esse arquivo gerado nada mais é que seu programa java compilado.
+
+Passo a passo: https://i.imgur.com/NjXvgGE.png
 
 Como provar que ele funciona: 
 
